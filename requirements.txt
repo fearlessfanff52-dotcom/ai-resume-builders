@@ -2,3 +2,4 @@ Flask
 reportlab
 pillow
 gunicorn
+gunicorn==21.2.0

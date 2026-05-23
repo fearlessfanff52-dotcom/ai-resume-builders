@@ -82,8 +82,14 @@ def generate():
     c.save()
     return send_file(filename, as_attachment=True)
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000, debug=False)
+import os
+
+if _name_ == "_main_":
+    # Render khud ek PORT allocate karta hai, agar wo na mile toh default 5000 use hoga
+    port = int(os.environ.get("PORT", 5000))
+    
+    # host="0.0.0.0" likhna sabse zaroori hai taaki Render ise scan kar sake
+    app.run(host="0.0.0.0", port=port)
     
     
     
