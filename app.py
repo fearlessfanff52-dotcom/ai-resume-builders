@@ -84,7 +84,7 @@ def generate():
 
 import os
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     # Render khud ek PORT allocate karta hai, agar wo na mile toh default 5000 use hoga
     port = int(os.environ.get("PORT", 5000))
     
